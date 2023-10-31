@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mesa Fácil </ion-title>
+      <br>
+    </ion-toolbar>
+     
+      <ion-img id="logopageinicial"
+      src="app.logo.png"
+      alt="Mesa Facíl inicial page "
+    ></ion-img>
+
+    
+    <br>
+    <ion-content class="loginprincipal">
+      <h2>Login</h2>
+      <form (ngSubmit)="LoginAuth()">
+        <ion-content class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" [(ngModel)]="user" name="user" required>
+        </ion-content>
+      <br>
+        <ion-content class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" required>
+        </ion-content>
+      <br> 
+       <ion-button type="submit">Entrar</ion-button>
+      </form>
+      <br>
+      <ion-content>
+        <p>Caso não possua uma conta entre em resgistar-se :</p>
+        
+        <ion-button type="submit"> Registrar-se </ion-button> 
+      </ion-content>
+    </ion-content>
+
+
+  </ion-header>
+</ion-content>
